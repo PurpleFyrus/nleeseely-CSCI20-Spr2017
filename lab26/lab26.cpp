@@ -78,17 +78,26 @@ int main ()
     TemperatureConverter temp1; //testing default constructor
     TemperatureConverter temp2(274); //testing overloaded constructor
     
+    cout << "Testing default constructor with no value" << endl;
     temp1.PrintTemperatures();
+    cout << " " << endl;
+    cout << "Testing overloaded constructor with value 274" << endl;
     temp2.PrintTemperatures();
+    cout << " " << endl;
     
+    cout << "Starting with Kelvin value: ";
     temp1.SetTempFromKelvin(400.15); //testing mutator function
     cout<<temp1.GetTempFromKelvin()<<endl;//testing accessor function
     temp1.PrintTemperatures();
-    
+    cout << " " << endl;
+
+    cout << "Starting with Celsius value: "; 
     temp2.SetTempFromCelsius(32); //testing other functions
     cout<<temp2.GetTempAsCelsius()<<endl;
     temp2.PrintTemperatures();
+    cout << " " << endl;
     
+    cout << "Starting with Farenheit value: ";
     temp2.SetTempFromFahrenheit(32);
     cout<<temp2.GetTempAsFahrenheit()<<endl;
     temp2.PrintTemperatures();
