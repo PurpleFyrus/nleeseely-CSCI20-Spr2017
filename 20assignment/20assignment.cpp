@@ -4,28 +4,37 @@
 #include<iostream>
 using namespace std;
 
-class DistanceConverter {
+class DistanceConverter {               /*
+                                          This class is designed to convert any measurement input
+                                          of Miles, Yards, Feet, Inches or Meters into any of those
+                                          listed and output them based on whatever function is called
+                                        */
     
     public:
-        void SetDistanceFromMiles(double input);
-        void SetDistanceFromYards(double input);
-        void SetDistanceFromFeet(double input);
-        void SetDistanceFromInches(double input);
-        void SetDistanceFromMeters(double input);
+        void SetDistanceFromMiles(double input);        //convert from miles to inches
+        void SetDistanceFromYards(double input);        //convert from yards to inches
+        void SetDistanceFromFeet(double input);         //convert from feet to inches
+        void SetDistanceFromInches(double input);       //stores value since it's already in inches
+        void SetDistanceFromMeters(double input);       //convert from meters to inches
         
-        double GetDistanceAsMiles();
-        double GetDistanceAsYards();
-        double GetDistanceAsFeet();
-        double GetDistanceAsInches();
-        double GetDistanceAsMeters();
+        double GetDistanceAsMiles();                    //returns the initial inches value as miles
+        double GetDistanceAsYards();                    //returns the initial inches value as yards
+        double GetDistanceAsFeet();                     //returns the initial inches value as feet
+        double GetDistanceAsInches();                   //returns the initial value since it's already in inches
+        double GetDistanceAsMeters();                   //returns the initial inches value as meters
         
-        DistanceConverter();
-        DistanceConverter(double input);
+        DistanceConverter();                            //default constructor
+        DistanceConverter(double input);                //second constructor to take into account other inputs
         
-        void PrintDistance();
-    
+        void PrintDistance();                           /*
+                                                        this function used to print all the 
+                                                        conversions if necessary
+                                                        */
     private:
-        double inches_;
+        double inches_;                                 /*
+                                                        this is the variable the input is stored in
+                                                        as inches
+                                                        */
 };
 
 void DistanceConverter::SetDistanceFromMiles(double input) {
