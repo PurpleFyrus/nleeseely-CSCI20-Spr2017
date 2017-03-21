@@ -11,20 +11,20 @@ class DistanceConverter {               /*
                                         */
     
     public:
-        void SetDistanceFromMiles(double input);        //convert from miles to inches
-        void SetDistanceFromYards(double input);        //convert from yards to inches
-        void SetDistanceFromFeet(double input);         //convert from feet to inches
-        void SetDistanceFromInches(double input);       //stores value since it's already in inches
-        void SetDistanceFromMeters(double input);       //convert from meters to inches
+        void SetDistanceFromMiles(double input);        //this function converts the input from miles to inches
+        void SetDistanceFromYards(double input);        //this function converts the input from yards to inches
+        void SetDistanceFromFeet(double input);         //this function converts the input from feet to inches
+        void SetDistanceFromInches(double input);       //this function stores the input since it's already in inches
+        void SetDistanceFromMeters(double input);       //this function converts the input from meters to inches
         
-        double GetDistanceAsMiles();                    //returns the initial inches value as miles
-        double GetDistanceAsYards();                    //returns the initial inches value as yards
-        double GetDistanceAsFeet();                     //returns the initial inches value as feet
-        double GetDistanceAsInches();                   //returns the initial value since it's already in inches
-        double GetDistanceAsMeters();                   //returns the initial inches value as meters
+        double GetDistanceAsMiles();                    //this function returns the initial inches value as miles
+        double GetDistanceAsYards();                    //this function returns the initial inches value as yards
+        double GetDistanceAsFeet();                     //this function returns the initial inches value as feet
+        double GetDistanceAsInches();                   //this function returns the initial value since it's already in inches
+        double GetDistanceAsMeters();                   //this function returns the initial inches value as meters
         
-        DistanceConverter();                            //default constructor
-        DistanceConverter(double input);                //second constructor to take into account other inputs
+        DistanceConverter();                            //this is the default constructor
+        DistanceConverter(double input);                //this is the second constructor to take into account other inputs
         
         void PrintDistance();                           /*
                                                         this function used to print all the 
@@ -75,22 +75,22 @@ double DistanceConverter::GetDistanceAsFeet() {
 }
 
 double DistanceConverter::GetDistanceAsInches() {
-    return inches_;
+    return inches_;                       //returns the initial inches value
 }
 
 double DistanceConverter::GetDistanceAsMeters() {
-    return inches_ / 39.3701;
+    return inches_ / 39.3701;             //returns the intial inches value as meters
 }
 
 DistanceConverter::DistanceConverter() {
-    inches_ = 0;
+    inches_ = 0;                          //this is the default constructor
 }
 
 DistanceConverter::DistanceConverter(double input) {
-    inches_ = input;
+    inches_ = input;                      //this is the second constructor
 }
 
-void DistanceConverter::PrintDistance() {
+void DistanceConverter::PrintDistance() {               //printing all the possible outputs from the input
     cout << "This is the initial value in Inches: " << GetDistanceAsInches() << endl;
     cout << "This is the initial value in Feet: " << GetDistanceAsFeet() << endl;
     cout << "This is the initial value in Yards: " << GetDistanceAsYards() << endl;
@@ -99,7 +99,7 @@ void DistanceConverter::PrintDistance() {
     return;
 }
 
-int main () 
+int main ()                 //this is the main function being run
 {
     
     DistanceConverter dist1;            //this is the primary default class using default constructor
