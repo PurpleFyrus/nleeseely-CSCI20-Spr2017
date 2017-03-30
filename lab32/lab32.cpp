@@ -46,7 +46,7 @@ int main()
   if (adjustedGrossIncome < 0) {                                  //obviously if the filer didn't make any money, they don't have to file
       totalTaxOwed = 0;
   }
-  else (adjustedGrossIncome >= 0) ;{                              //this is to incorporate all scenarios of the user's wages above 0
+  else {                              //this is to incorporate all scenarios of the user's wages above 0
       switch (filingStatus) {                                     //used to differentiate between marital status
           case 1:                                                 //case 1 is obviously for those who file as single
               if ((adjustedGrossIncome >= 0) && (adjustedGrossIncome <= 8925)){             //for those who make between 0 and 8925 in overall wages
