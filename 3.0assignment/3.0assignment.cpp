@@ -47,7 +47,7 @@ int main() {
         cout << "Please enter the number of rounds you wish to play the best out of: " << endl;
         cin >> numRounds;
         
-        while (numRounds != player.GetScore() + cpu.GetScore()) {
+        while (numRounds != 0) {
             cout << "Please enter 1 for rock, 2 for paper, 3 for scissors, 4 for lizard, or 5 for spock" << endl;
             cin >> playerChoice;               //having the user input their choice
             
@@ -174,11 +174,11 @@ int main() {
                 cout << "You didn't enter an integer from 1 through 5" << cout;
             }
                 
-        
+        numRounds = numRounds - 1;
         
         }
-        
-    cout << "end" << endl;
+     
+     cout << "end" << endl;
     
     return 0;
 }
