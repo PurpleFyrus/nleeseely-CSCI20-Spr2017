@@ -146,6 +146,5 @@ int main () {
     }
     
     cout << "The total cost of all your items you wish to purchase is: $" << customerCartTotal << endl;                     //this is the final balance in how much the customer needs to pay to get their items
-    
     return 0;
 }
