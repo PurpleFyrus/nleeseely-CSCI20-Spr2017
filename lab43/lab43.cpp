@@ -1,7 +1,10 @@
 //created by: Nick LS
 //created on: 4/30/2017
 
-//the following assignment's purpose is to simulate an online shopping experience, but with the use of a class
+//the following assignment's purpose is to simulate an online shopping experience,
+//but with the added use of a class to make the main function cleaner
+//and with the use of an array of the class, so there are multiple objects of shopObject
+//i will be using the second object I created out of the 4 made with the array
 
 #include <iostream>
 #include <string>
