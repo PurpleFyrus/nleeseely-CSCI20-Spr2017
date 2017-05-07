@@ -1,4 +1,4 @@
-//created by: nick ls
+//created by: nick l.s.
 //created on 5/3/2017
 
 //program takes in a first and last name (via Strings), then outputs 3 possible usernames based on those inputs
