@@ -110,9 +110,9 @@ int main() {
         newGPA = semesterGPA;                                                   //however, if current GPA is 0.0 (i.e. no GPA) then its just New GPA
     }
     
-        outFS.open("outputFile.hmtl");                                          //opens the output html file stream
+        outFS.open("outputfile.html");                                          //opens the output html file stream
     if (!outFS.is_open()) {                                                     //insures the output file is open
-        cout << "Could not open file outputFile.hmtl" << endl;
+        cout << "Could not open file outputfile.html" << endl;
         return 1;                                                               // 1 indicates error
     }
     
