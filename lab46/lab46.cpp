@@ -115,21 +115,22 @@ int main() {
         cout << "Could not open file outputfile.html" << endl;
         return 1;                                                               // 1 indicates error
     }
-    
-    outFS << "Student Name: " << studentName << endl;                           //outputs student name to HTML file
-    outFS << "Semester Number: " << semester << endl;                           //outputs semester number to HTML file
-    outFS << "Class Grades for all " << numClassesTaken << " classes" << endl;  //outputs header for proceeding grades (and number of classes) to HTML file
+    outFS << "<html>" << endl;
+    outFS << "<p>" << "Student Name: " << studentName << "</p>" << endl;                           //outputs student name to HTML file
+    outFS << "<p>" << "Semester Number: " << semester << "</p>" << endl;                           //outputs semester number to HTML file
+    outFS << "<p>" << "Class Grades for all " << numClassesTaken << " classes" << "</p>" << endl;  //outputs header for proceeding grades (and number of classes) to HTML file
     
     for (int i = 0; i < numClassesTaken; i++) {                                 //loops through all class units and grades and outputs them to HTML file
-        outFS << classUnits[i] << " " << classGrades[i] << endl;
+        outFS << "<p>" << classUnits[i] << " " << classGrades[i] << "</p>" << endl;
     }
     
-    outFS << totalUnits << " " << currentGPA << endl;                           //outputs total units and GPA before semester
+    outFS << "<p>" << totalUnits << " " << currentGPA << "</p>" << endl;                           //outputs total units and GPA before semester
     
-    outFS << "Grade Points for this semester: " << gradePoints << endl;         //outputs total grade points for semester being processed
-    outFS << "Unit Points for this semester: " << unitPoints << endl;           //outputs the total unit points for semester being processed
-    outFS << "This Semester GPA: " << setprecision(2) << semesterGPA << endl;   //outputs the GPA for the semseter being processed
-    outFS << "New Overall GPA: " << setprecision(2) << newGPA << endl;          //outputs the new GPA with the current semester's GPA added
+    outFS << "<p>" << "Grade Points for this semester: " << gradePoints << "</p>" << endl;         //outputs total grade points for semester being processed
+    outFS << "<p>" << "Unit Points for this semester: " << unitPoints << "</p>" << endl;           //outputs the total unit points for semester being processed
+    outFS << "<p>" << "This Semester GPA: " << setprecision(2) << semesterGPA << "</p>" << endl;   //outputs the GPA for the semseter being processed
+    outFS << "<p>" << "New Overall GPA: " << setprecision(2) << newGPA << "</p>" << endl;          //outputs the new GPA with the current semester's GPA added
+    outFS << "</html>" << endl;
     
     outFS.close();                                                              //closes the HTML file 
     
